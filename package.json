@@ -1,0 +1,46 @@
+{
+  "name": "tailor-test",
+  "version": "0.1.0",
+  "description": "Prototype to use Tailor architecture",
+  "scripts": {
+    "start": "node --harmony src/tailor.js",
+    "test": "mocha --harmony tests/test.js",
+    "lint": "eslint src/ tests/"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "engines": {
+    "node": ">4.4.x"
+  },
+  "author": "Damián García",
+  "license": "MIT",
+  "dependencies": {
+    "node-tailor": "^1.0.6",
+    "parse-link-header": "^0.2.0",
+    "parse5": "^2.1.5"
+  },
+  "devDependencies": {
+    "eslint": "^2.0.0",
+    "istanbul": "^0.4.1",
+    "lazypipe": "^1.0.1",
+    "loadtest": "^1.3.0",
+    "metrics": "^0.1.9",
+    "mocha": "^2.2.5",
+    "nock": "^2.6.0",
+    "pre-commit": "^1.1.2",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.15.3",
+    "uglify-js": "^2.6.1",
+    "wd": "^0.4.0"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "MAINTAINERS",
+    "index.js",
+    "README.md",
+    "src/pipe.min.js"
+  ]
+}
