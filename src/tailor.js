@@ -22,3 +22,9 @@ const footerFragment = http.createServer(
 );
 footerFragment.listen(8081);
 console.log('footerFragment started at port 8081');
+
+const bodyFragment = http.createServer(
+    fragmentServer('body-start', 'http://localhost:8083')
+);
+bodyFragment.listen(8083);
+console.log('bodyFragment started at port 8083');

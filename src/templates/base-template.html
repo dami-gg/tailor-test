@@ -1,8 +1,16 @@
 <!doctype html>
 <html>
 <head>
+    <base href="/">
     <meta charset="utf-8">
     <script type="slot" name="head"></script>
+
+    <script>
+        define('word', function () {
+            // Example dependency for the fragments
+            return 'initialised';
+        });
+    </script>
 </head>
 <body>
     <div>
@@ -11,6 +19,6 @@
     </div>
 </body>
 <footer>
-    <fragment src="http://localhost:8081"></fragment>
+    <fragment async src="http://localhost:8081"></fragment>
 </footer>
 </html>
